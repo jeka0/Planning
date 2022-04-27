@@ -13,24 +13,28 @@ namespace Planning
 {
     public partial class Form1 : Form
     {
-        private int c = 67, c2=67;
+        private int c = 67, c2=65;
+        public static Form1 form;
         private Thread thread, thread2;
         private bool stop1, stop2;
         public Form1()
         {
             InitializeComponent();
+            form = this;
         }
-
+        public void ListAdd(String str)
+        {
+            listBox1.Invoke(new Action(() => { listBox1.Items.Add(str);
+                listBox1.SelectedIndex = listBox1.Items.Count - 1;
+            }));
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             dataGridView1.AllowUserToAddRows = false;
             dataGridView2.AllowUserToAddRows = false;
             dataGridView3.AllowUserToAddRows = false;
-            dataGridView4.AllowUserToAddRows = false;
             dataGridView1.Rows.Add("A", 8);
             dataGridView1.Rows.Add("B", 4);
-            dataGridView4.Rows.Add("A", 8);
-            dataGridView4.Rows.Add("B", 4);
         }
 
         private void Add_Click(object sender, EventArgs e)
@@ -72,6 +76,7 @@ namespace Planning
                     {
                         String Name = dataGridView1[0, i].Value.ToString();
                         Int32.TryParse(dataGridView1[1, i].Value.ToString(), out int value);
+                        if (value < 0) value = 0;
                         tasks.Add(new Task(Name, value));
                     }));
                 }
@@ -83,33 +88,34 @@ namespace Planning
                     dataGridView2.Rows.Add(task.Name, task.Time);
                 }));
                 shortestTaskFirst.Start();
-                thread = null;
             }
+            thread = null;
         }
         private void StratThread2()
         {
+            List<Task> tasks = new List<Task>();
+            c2 = 65;
+            for (int i = 0; i < numericUpDown1.Value; i++)
+            {
+                String Name = (char)c2 + "";
+                tasks.Add(new Task(Name));
+                c2++;
+            }
+            Int32.TryParse(textBox1.Text, out int value);
+            if (value == 0) value = 1;
+            SelectingShortestProcess shortestProcess = new SelectingShortestProcess(tasks, value);
             while (!stop2)
             {
-                List<Task> tasks = new List<Task>();
-                for (int i = 0; i < dataGridView4.Rows.Count; i++)
-                {
-                    dataGridView4.Invoke(new Action(() =>
-                    {
-                        String Name = dataGridView4[0, i].Value.ToString();
-                        Int32.TryParse(dataGridView4[1, i].Value.ToString(), out int value);
-                        tasks.Add(new Task(Name, value));
-                    }));
-                }
-                SelectingShortestProcess shortestProcess = new SelectingShortestProcess(tasks);
-                shortestProcess.CreatingQueue();
+                shortestProcess.SetNewTime();
+                shortestProcess.CreatingQueue();              
                 dataGridView3.Invoke(new Action(() => { dataGridView3.Rows.Clear(); }));
                 foreach (Task task in tasks) dataGridView3.Invoke(new Action(() =>
                 {
                     dataGridView3.Rows.Add(task.Name, task.Time);
                 }));
                 shortestProcess.Start();
-                thread2 = null;
             }
+            thread2 = null;
         }
 
         private void Start2_Click(object sender, EventArgs e)
@@ -119,15 +125,6 @@ namespace Planning
                 stop2 = false;
                 thread2 = new Thread(StratThread2);
                 thread2.Start();
-            }
-        }
-
-        private void Add2_Click(object sender, EventArgs e)
-        {
-            if (dataGridView4.Rows.Count < 10)
-            {
-                dataGridView4.Rows.Add((char)c2, 4);
-                c2++;
             }
         }
 
@@ -147,14 +144,5 @@ namespace Planning
             if (thread2 != null) thread2.Abort();
         }
 
-        private void Remove2_Click(object sender, EventArgs e)
-        {
-            int count = dataGridView4.Rows.Count;
-            if (count > 2)
-            {
-                dataGridView4.Rows.Remove(dataGridView4.Rows[count - 1]);
-                c2--;
-            }
-        }
     }
 }

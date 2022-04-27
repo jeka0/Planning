@@ -42,23 +42,23 @@ namespace Planning
             this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.Stop2 = new System.Windows.Forms.Button();
             this.Start2 = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Remove2 = new System.Windows.Forms.Button();
-            this.Add2 = new System.Windows.Forms.Button();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label2 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -71,16 +71,18 @@ namespace Planning
             this.panel1.Controls.Add(this.Add);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(13, 13);
+            this.panel1.Location = new System.Drawing.Point(10, 11);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(482, 482);
+            this.panel1.Size = new System.Drawing.Size(362, 392);
             this.panel1.TabIndex = 0;
             // 
             // Stop
             // 
-            this.Stop.Location = new System.Drawing.Point(241, 440);
+            this.Stop.Location = new System.Drawing.Point(226, 358);
+            this.Stop.Margin = new System.Windows.Forms.Padding(2);
             this.Stop.Name = "Stop";
-            this.Stop.Size = new System.Drawing.Size(158, 37);
+            this.Stop.Size = new System.Drawing.Size(118, 30);
             this.Stop.TabIndex = 6;
             this.Stop.Text = "Stop";
             this.Stop.UseVisualStyleBackColor = true;
@@ -88,9 +90,10 @@ namespace Planning
             // 
             // Start
             // 
-            this.Start.Location = new System.Drawing.Point(31, 440);
+            this.Start.Location = new System.Drawing.Point(23, 358);
+            this.Start.Margin = new System.Windows.Forms.Padding(2);
             this.Start.Name = "Start";
-            this.Start.Size = new System.Drawing.Size(158, 37);
+            this.Start.Size = new System.Drawing.Size(118, 30);
             this.Start.TabIndex = 5;
             this.Start.Text = "Start";
             this.Start.UseVisualStyleBackColor = true;
@@ -102,12 +105,13 @@ namespace Planning
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
-            this.dataGridView2.Location = new System.Drawing.Point(55, 264);
+            this.dataGridView2.Location = new System.Drawing.Point(23, 214);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(323, 166);
+            this.dataGridView2.Size = new System.Drawing.Size(321, 140);
             this.dataGridView2.TabIndex = 4;
             // 
             // dataGridViewTextBoxColumn1
@@ -128,9 +132,10 @@ namespace Planning
             // 
             // Remove
             // 
-            this.Remove.Location = new System.Drawing.Point(241, 221);
+            this.Remove.Location = new System.Drawing.Point(226, 180);
+            this.Remove.Margin = new System.Windows.Forms.Padding(2);
             this.Remove.Name = "Remove";
-            this.Remove.Size = new System.Drawing.Size(158, 37);
+            this.Remove.Size = new System.Drawing.Size(118, 30);
             this.Remove.TabIndex = 3;
             this.Remove.Text = "Remove";
             this.Remove.UseVisualStyleBackColor = true;
@@ -138,9 +143,10 @@ namespace Planning
             // 
             // Add
             // 
-            this.Add.Location = new System.Drawing.Point(31, 221);
+            this.Add.Location = new System.Drawing.Point(23, 180);
+            this.Add.Margin = new System.Windows.Forms.Padding(2);
             this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(158, 37);
+            this.Add.Size = new System.Drawing.Size(118, 30);
             this.Add.TabIndex = 2;
             this.Add.Text = "Add";
             this.Add.UseVisualStyleBackColor = true;
@@ -152,12 +158,13 @@ namespace Planning
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Name,
             this.Time});
-            this.dataGridView1.Location = new System.Drawing.Point(55, 49);
+            this.dataGridView1.Location = new System.Drawing.Point(23, 31);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(323, 166);
+            this.dataGridView1.Size = new System.Drawing.Size(321, 145);
             this.dataGridView1.TabIndex = 1;
             // 
             // Name
@@ -180,32 +187,86 @@ namespace Planning
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(41, 9);
+            this.label1.Location = new System.Drawing.Point(31, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(348, 25);
+            this.label1.Size = new System.Drawing.Size(285, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "«Сначала самое короткое задание»";
             // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.listBox1);
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.numericUpDown1);
             this.panel2.Controls.Add(this.Stop2);
             this.panel2.Controls.Add(this.Start2);
             this.panel2.Controls.Add(this.dataGridView3);
-            this.panel2.Controls.Add(this.Remove2);
-            this.panel2.Controls.Add(this.Add2);
-            this.panel2.Controls.Add(this.dataGridView4);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(512, 13);
+            this.panel2.Location = new System.Drawing.Point(384, 11);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(482, 482);
+            this.panel2.Size = new System.Drawing.Size(362, 392);
             this.panel2.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1.Location = new System.Drawing.Point(182, 133);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(151, 22);
+            this.textBox1.TabIndex = 11;
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(20, 117);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(133, 58);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Выберите размер кванта времени выполнения";
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(20, 49);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(155, 58);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Выберите количество заданий в очереди (от 2 до 10)";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numericUpDown1.Location = new System.Drawing.Point(181, 64);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(152, 22);
+            this.numericUpDown1.TabIndex = 8;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
             // 
             // Stop2
             // 
-            this.Stop2.Location = new System.Drawing.Point(241, 440);
+            this.Stop2.Location = new System.Drawing.Point(215, 358);
+            this.Stop2.Margin = new System.Windows.Forms.Padding(2);
             this.Stop2.Name = "Stop2";
-            this.Stop2.Size = new System.Drawing.Size(158, 37);
+            this.Stop2.Size = new System.Drawing.Size(118, 30);
             this.Stop2.TabIndex = 7;
             this.Stop2.Text = "Stop";
             this.Stop2.UseVisualStyleBackColor = true;
@@ -213,9 +274,10 @@ namespace Planning
             // 
             // Start2
             // 
-            this.Start2.Location = new System.Drawing.Point(31, 440);
+            this.Start2.Location = new System.Drawing.Point(23, 358);
+            this.Start2.Margin = new System.Windows.Forms.Padding(2);
             this.Start2.Name = "Start2";
-            this.Start2.Size = new System.Drawing.Size(158, 37);
+            this.Start2.Size = new System.Drawing.Size(118, 30);
             this.Start2.TabIndex = 5;
             this.Start2.Text = "Start";
             this.Start2.UseVisualStyleBackColor = true;
@@ -227,13 +289,25 @@ namespace Planning
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
-            this.dataGridView3.Location = new System.Drawing.Point(55, 264);
+            this.dataGridView3.Location = new System.Drawing.Point(23, 177);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersVisible = false;
             this.dataGridView3.RowHeadersWidth = 51;
             this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(323, 166);
+            this.dataGridView3.Size = new System.Drawing.Size(190, 177);
             this.dataGridView3.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(2, 9);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(358, 18);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "«Выбор следующим самого короткого процесса»";
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -241,7 +315,7 @@ namespace Planning
             this.dataGridViewTextBoxColumn3.HeaderText = "Name";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 160;
+            this.dataGridViewTextBoxColumn3.Width = 95;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -249,75 +323,24 @@ namespace Planning
             this.dataGridViewTextBoxColumn4.HeaderText = "Time";
             this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 160;
+            this.dataGridViewTextBoxColumn4.Width = 95;
             // 
-            // Remove2
+            // listBox1
             // 
-            this.Remove2.Location = new System.Drawing.Point(241, 221);
-            this.Remove2.Name = "Remove2";
-            this.Remove2.Size = new System.Drawing.Size(158, 37);
-            this.Remove2.TabIndex = 3;
-            this.Remove2.Text = "Remove";
-            this.Remove2.UseVisualStyleBackColor = true;
-            this.Remove2.Click += new System.EventHandler(this.Remove2_Click);
-            // 
-            // Add2
-            // 
-            this.Add2.Location = new System.Drawing.Point(31, 221);
-            this.Add2.Name = "Add2";
-            this.Add2.Size = new System.Drawing.Size(158, 37);
-            this.Add2.TabIndex = 2;
-            this.Add2.Text = "Add";
-            this.Add2.UseVisualStyleBackColor = true;
-            this.Add2.Click += new System.EventHandler(this.Add2_Click);
-            // 
-            // dataGridView4
-            // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
-            this.dataGridView4.Location = new System.Drawing.Point(55, 49);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.RowHeadersVisible = false;
-            this.dataGridView4.RowHeadersWidth = 51;
-            this.dataGridView4.RowTemplate.Height = 24;
-            this.dataGridView4.Size = new System.Drawing.Size(323, 166);
-            this.dataGridView4.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.Frozen = true;
-            this.dataGridViewTextBoxColumn5.HeaderText = "Name";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 160;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.Frozen = true;
-            this.dataGridViewTextBoxColumn6.HeaderText = "Time";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 160;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(2, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(475, 25);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "«Выбор следующим самого короткого процесса»";
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(213, 177);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(144, 173);
+            this.listBox1.TabIndex = 12;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1006, 535);
+            this.ClientSize = new System.Drawing.Size(754, 435);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             //this.Name = "Form1";
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
@@ -328,8 +351,8 @@ namespace Planning
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -350,16 +373,16 @@ namespace Planning
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button Start2;
         private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.Button Remove2;
-        private System.Windows.Forms.Button Add2;
-        private System.Windows.Forms.DataGridView dataGridView4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Stop;
         private System.Windows.Forms.Button Stop2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }
 
