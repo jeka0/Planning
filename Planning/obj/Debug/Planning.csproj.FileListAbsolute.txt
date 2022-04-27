@@ -1,0 +1,10 @@
+D:\Visual studio\Planning\Planning\obj\Debug\Planning.csproj.AssemblyReference.cache
+D:\Visual studio\Planning\Planning\obj\Debug\Planning.Form1.resources
+D:\Visual studio\Planning\Planning\obj\Debug\Planning.Properties.Resources.resources
+D:\Visual studio\Planning\Planning\obj\Debug\Planning.csproj.GenerateResource.cache
+D:\Visual studio\Planning\Planning\obj\Debug\Planning.csproj.CoreCompileInputs.cache
+D:\Visual studio\Planning\Planning\bin\Debug\Planning.exe.config
+D:\Visual studio\Planning\Planning\bin\Debug\Planning.exe
+D:\Visual studio\Planning\Planning\bin\Debug\Planning.pdb
+D:\Visual studio\Planning\Planning\obj\Debug\Planning.exe
+D:\Visual studio\Planning\Planning\obj\Debug\Planning.pdb
