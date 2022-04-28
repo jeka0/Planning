@@ -82,6 +82,7 @@ namespace Planning
                 }
                 ShortestTaskFirst shortestTaskFirst = new ShortestTaskFirst(tasks);
                 shortestTaskFirst.CreatingQueue();
+                textBox2.Invoke(new Action(() => { textBox2.Text = shortestTaskFirst.FindMinTime().ToString(); }));
                 dataGridView2.Invoke(new Action(() => { dataGridView2.Rows.Clear(); }));
                 foreach (Task task in tasks) dataGridView2.Invoke(new Action(() =>
                 {
@@ -107,7 +108,8 @@ namespace Planning
             while (!stop2)
             {
                 shortestProcess.SetNewTime();
-                shortestProcess.CreatingQueue();              
+                shortestProcess.CreatingQueue();
+                textBox3.Invoke(new Action(() => { textBox3.Text = shortestProcess.FindMinTime().ToString(); }));
                 dataGridView3.Invoke(new Action(() => { dataGridView3.Rows.Clear(); }));
                 foreach (Task task in tasks) dataGridView3.Invoke(new Action(() =>
                 {

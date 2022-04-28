@@ -46,5 +46,11 @@ namespace Planning
                 task = tasks.Find((a) => a.Time > 0);
             }
         }
+        public int FindMinTime()
+        {
+            int sum = 0, count = tasks.Count;
+            foreach (Task task in tasks) sum += task.Time * count--;
+            return sum/ tasks.Count;
+        }
     }
 }

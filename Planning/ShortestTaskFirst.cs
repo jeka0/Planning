@@ -25,14 +25,11 @@ namespace Planning
                 Thread.Sleep(task.Time*100);
             }
         }
-        public Task FindMinTask()
+        public int FindMinTime()
         {
-            Task min = tasks[0];
-            foreach(Task task in tasks)
-            {
-                if (task.Time < min.Time) min = task;
-            }
-            return min;
+            int sum = 0, count = tasks.Count;
+            foreach (Task task in tasks) sum += task.Time * count--;
+            return sum/ tasks.Count;
         }
     }
 }
